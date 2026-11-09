@@ -42,11 +42,7 @@ ArrayList<Employee> employees = new ArrayList<Employee>();
     double totalBonus = 0;
     for (Employee e : employees) {
         totalTax += e.calculateTax();
-        if(e instanceof FullTimeEmployee){
-        totalBonus +=((FullTimeEmployee)e).calculateBonus(4.5);
-    }else if(e instanceof ContractorEmployee){
-      totalBonus +=((ContractorEmployee)e).calculateBonus(4.5);   
-    }
+      totalBonus +=e.calculateBonus(4.5);   
     }
     System.out.println("\n--- System Statistics ---");
     System.out.println("Total Tax: " + totalTax);
