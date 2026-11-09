@@ -21,6 +21,11 @@ public abstract double calculateNetSalary();
 public double calculateTax() {
     return baseSalary * TAX_RATE;
 }
+ 
+@Override
+public double calculateBonus(double performanceScore) {
+    return baseSalary * 0.1 * performanceScore;
+}   
 
 @Override
 public int compareTo(Employee other) {
